@@ -1,0 +1,18 @@
+/*
+    THIS FILE IS USED TO DEFINE 
+    THE STYLE OF ALL THE COMPONENTS
+*/
+header{    
+    width: 80%;
+    height: 10%;
+    margin-bottom: 3vh;
+
+    border-radius: 1em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--lightBackgroundColor);
+    color: white;
+}
