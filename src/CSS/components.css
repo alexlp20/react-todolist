@@ -3,16 +3,15 @@
     THE STYLE OF ALL THE COMPONENTS
 */
 header{    
-    width: 80%;
-    height: 10%;
-    margin-bottom: 3vh;
-
-    border-radius: 1em;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: var(--lightBackgroundColor);
-    color: white;
+    height: 20%;
+    margin-bottom: 5vw;
+    border-radius: 0.5em;
 }
+
+header > *{
+    height: 32%;
+    background-color: var(--contrastColor);
+    color: var(--defaultColor);
+}
+
+nav{height: 50%;}
