@@ -9,14 +9,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    border-radius: 0.5em;
 }
 :root{
-    --yellow: #fdec00;
-    --containerColor: rgb(255, 255, 255);
-    --defaultColor: rgb(203, 194, 255);
-    --textColor: rgb(55, 138, 255);
+    --appBackground: rgb(18, 18, 18);
+    --darkBackground: rgb(47, 47, 47);
+    --darkerBackground: rgb(37, 37, 37);
+    --notSelectedText: rgb(134, 134, 134);
+    --selectedText: rgb(255, 255, 255);
 }
 /* 
     ALL DEFAULT STYLES 
@@ -30,12 +29,13 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
+
+    background-color: rgb(18, 18, 18);
 }
 
 .Heading{
     font-family: "Comfortaa", cursive;
     font-weight: bolder;
-    font-size: 3vh;
 }
