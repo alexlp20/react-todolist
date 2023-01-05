@@ -9,11 +9,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    border-radius: 0.5em;
 }
 :root{
     --yellow: #fdec00;
-    --contrastColor: #000;
-    --defaultColor: #ffffff;
+    --containerColor: rgb(255, 255, 255);
+    --defaultColor: rgb(203, 194, 255);
+    --textColor: rgb(55, 138, 255);
 }
 /* 
     ALL DEFAULT STYLES 
@@ -22,26 +25,17 @@
 .App {
     width: 100vw;
     height: 100vh;
-    
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
+    padding: 3vh;
 
-    background-color: var(--defaultColor);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .Heading{
     font-family: "Comfortaa", cursive;
     font-weight: bolder;
-}
-
-.Container{
-    width: 90%;
-
-    border-radius: 0.5em;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    font-size: 3vh;
 }

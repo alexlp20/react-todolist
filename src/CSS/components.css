@@ -1,17 +1,10 @@
-/*
-    THIS FILE IS USED TO DEFINE 
-    THE STYLE OF ALL THE COMPONENTS
-*/
-header{    
-    height: 20%;
-    margin-bottom: 5vw;
-    border-radius: 0.5em;
+main, nav{
+    background-color: var(--defaultColor);
+}
+nav {
+    width: 7%;
 }
 
-header > *{
-    height: 32%;
-    background-color: var(--contrastColor);
-    color: var(--defaultColor);
+main {
+    width: 90%;
 }
-
-nav{height: 50%;}

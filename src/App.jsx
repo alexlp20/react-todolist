@@ -1,12 +1,15 @@
-import Header from "./Components/Header";
 import "./CSS/global.css";
+import Nav from "./Components/Nav"
+import Main from "./Components/Main";
 
 function App() {
   return (
     <div className="App">
-      <Header  taskNumber={null}/>
+      <Nav />
+      <Main />
     </div>
   );
 }
 
 export default App;
+
