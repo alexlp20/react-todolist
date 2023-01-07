@@ -19,14 +19,14 @@ function Nav(props){
                 <NavTab text="School"/>
                 <NavTab text="Work"/>
             </div>
-            <div className="miscButtons">
-                <h3 style={{
-                    color: "rgb(134, 134, 134)",
-                    borderTop: "solid 2px rgb(47, 47, 47)",
+            <div className="miscButtons" style={{                    
+                    color: "var(--light)",
+                    borderTop: "solid 2px var(--dark)",
                     paddingTop: "2%",
                     display: "flex",
-                    justifyContent: "flex-end"}}
-                    className="Heading">text text text text</h3>
+                    justifyContent: "flex-end"}}>  
+                <span class="material-symbols-outlined icon">info</span>
+                <span class="material-symbols-outlined icon">settings</span>
             </div>
         </nav>
     );
