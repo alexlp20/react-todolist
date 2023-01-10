@@ -1,33 +1,31 @@
+import { useState } from "react";
 import "../CSS/components.css";
 import "../CSS/global.css"
 
-export  var currentTab = null;
-function NavTab(props){
+function NavTab(props){;
     return (
-    <div className="NavTab">
-        <img src={props.url} />
-        <h3 className="Heading">{props.text}</h3>
+    <div className={`NavTab ${(props.current == props.content) ? 'currentNavTab' : ''}`} >
+        <h3 className="Heading">{props.content}</h3>
     </div>
-
     );
 }
-
 function Nav(props){
     return (
         <nav>
             <div className="tabContainer">
-                <NavTab text="Home"/>
-                <NavTab text="School"/>
-                <NavTab text="Work"/>
+                <NavTab content="Home"/>
+                <NavTab content="School"/>
+                <NavTab content="Work"/>
             </div>
             <div className="miscButtons" style={{                    
-                    color: "var(--light)",
-                    borderTop: "solid 2px var(--dark)",
+                    color: "var(--second)",
+                    borderTop: "solid 2px var(--first)",
                     paddingTop: "2%",
                     display: "flex",
                     justifyContent: "flex-end"}}>  
-                <span class="material-symbols-outlined icon info">info</span>
-                <span class="material-symbols-outlined icon settings">settings</span>
+                <span className="material-symbols-outlined icon">info</span>
+                <span className="material-symbols-outlined icon">settings</span>
+                <span className="material-symbols-outlined icon">palette</span>
             </div>
         </nav>
     );

@@ -1,9 +1,11 @@
+import { useState } from "react";
+
 function HeaderOfTaskSection(props){
     return(
         <div 
         className="AddTaskSection" 
         style={{
-            borderBottom: "solid 2px var(--default)",
+            borderBottom: "solid 2px var(--middle)",
             paddingBottom: "1.4%",
         }}>
             <h2 
@@ -12,19 +14,16 @@ function HeaderOfTaskSection(props){
                 fontSize: "2.2vw",
                 fontFamily: "Comfortaa, sans-serif", 
                 fontWeight: "lighter",
-                color: "var(--light)",}}> 
-                    {props.currentTab /*CONTENT*/} 
+                color: "var(--second)",}}> 
+                    {"hi"} 
             </h2>
-            <button style={{
-                background: "none",  
-            }}>Add Task <span className="material-symbols-outlined icon add">add</span></button>
         </div>
     );
 }
 function Main(props){
     return (
         <main>
-            <HeaderOfTaskSection currentTab={currentTab}/>
+            <HeaderOfTaskSection currentTab= 'duh'/>
         </main>
     );   
 }

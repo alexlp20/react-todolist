@@ -15,27 +15,25 @@
 .icon{    
     margin: 0.3vw;
 
-    color:var(--light);
+    color:var(--second);
     font-size: 1.6vw;
 
-    transition: all 500ms;
+    transition: all 750ms ease-in-out;
 }
-.icon:hover{color: var(--lighter); cursor: pointer;}
-.settings:hover, .add:hover{rotate: 90deg;}
-.info:hover{ font-variation-settings: 'FILL' 1,  'wght' 500, 'GRAD' 0,'opsz' 48}
+.icon:hover{color: var(--secondLower); cursor: pointer; rotate: 360deg;}
 *{
-    font-family: "Courier Prime", sans-serif;
+    font-family: "Comfortaa", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 :root{
     --appBackground: rgb(18, 18, 18);
-    --dark: rgb(47, 47, 47);
-    --darker: rgb(37, 37, 37);
-    --default: rgb(62, 62, 62);
-    --light: rgb(134, 134, 134);
-    --lighter: rgb(255, 255, 255);
+    --first: rgb(47, 47, 47);
+    --firstLower: rgb(37, 37, 37);
+    --middle: rgb(62, 62, 62);
+    --second: rgb(134, 134, 134);
+    --secondLower: rgb(255, 255, 255);
 }
 /* 
     ALL DEFAULT STYLES 
@@ -52,10 +50,10 @@
     justify-content: center;
     align-items: stretch;
 
-    background-color: rgb(18, 18, 18);
+    background-color: var(--appBackground);
 }
 
 .Heading{
-    font-family: "Courier Prime", cursive;
+    font-family: "Comfortaa", cursive;
     font-weight: bolder;
 }
