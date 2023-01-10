@@ -11,17 +11,20 @@ function HeaderOfTaskSection(props){
                 letterSpacing: "0.1em",
                 fontSize: "2.2vw",
                 fontFamily: "Comfortaa, sans-serif", 
+                fontWeight: "lighter",
                 color: "var(--light)",}}> 
                     {props.currentTab /*CONTENT*/} 
             </h2>
-            <button>Add Task</button>
+            <button style={{
+                background: "none",  
+            }}>Add Task <span className="material-symbols-outlined icon add">add</span></button>
         </div>
     );
 }
 function Main(props){
     return (
         <main>
-            <HeaderOfTaskSection currentTab="Home"/>
+            <HeaderOfTaskSection currentTab={currentTab}/>
         </main>
     );   
 }

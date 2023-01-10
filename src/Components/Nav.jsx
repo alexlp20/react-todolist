@@ -1,6 +1,7 @@
 import "../CSS/components.css";
 import "../CSS/global.css"
 
+export  var currentTab = null;
 function NavTab(props){
     return (
     <div className="NavTab">
@@ -25,8 +26,8 @@ function Nav(props){
                     paddingTop: "2%",
                     display: "flex",
                     justifyContent: "flex-end"}}>  
-                <span class="material-symbols-outlined icon">info</span>
-                <span class="material-symbols-outlined icon">settings</span>
+                <span class="material-symbols-outlined icon info">info</span>
+                <span class="material-symbols-outlined icon settings">settings</span>
             </div>
         </nav>
     );
