@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { currentTab } from "../App";
 
 function HeaderOfTaskSection(props){
     return(
@@ -14,8 +15,8 @@ function HeaderOfTaskSection(props){
                 fontSize: "2.2vw",
                 fontFamily: "Comfortaa, sans-serif", 
                 fontWeight: "lighter",
-                color: "var(--second)",}}> 
-                    {"hi"} 
+                color: "var(--second)",}}
+            >{currentTab}   
             </h2>
         </div>
     );
@@ -23,7 +24,7 @@ function HeaderOfTaskSection(props){
 function Main(props){
     return (
         <main>
-            <HeaderOfTaskSection currentTab= 'duh'/>
+            <HeaderOfTaskSection currentTab={currentTab}/>
         </main>
     );   
 }
