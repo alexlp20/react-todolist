@@ -1,48 +1,19 @@
-nav {
-    width: 20%;
-    padding: 3vw;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    border-radius: 1em 0 0 1em;
-
-    background-color: var(--firstLower);
-}
-
-main {
-    width: 70%;
-    padding: 3vw;
-    border-radius: 0 1em 1em 0;
-
-    background-color: var(--first);
-}
-
 .NavTab{
-    color: var(--second);
-
+    color: var(--underline);
     padding-left: 5%;
-    padding-block: 10%;
+    padding-block: 5%;
     padding-bottom: 1%;
-
-    border-bottom: solid 2px var(--first);
-
+    border-bottom: solid 2px var(--underline);
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
     transition: all 300ms;
-
     font-size: 1.9vh;
 }
 .NavTab:hover{
     color: var(--secondLower);
-
     padding-left: 20%;
-
-    border-bottom-color: var(--second);
-
+    border-bottom-color: var(--secondLower);
     cursor: pointer;
 }
 
@@ -50,25 +21,13 @@ main {
     width: 100%;
     height: 12%;
     padding-inline: 3vw;
-
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
 
-.currentNavTab::before{
-    content: "";
+.currentNavTab{
+    color: var(--blue);
+    border-bottom-color: var(--blue);
+}
 
-    width: 0.5vw;
-    height: 0.5vw;
-    margin: 0.3vw;
-    background-color: var(--second);
-    border-radius: 50%;
-    transition: all 300ms;
-}
-.currentNavTab:hover::before{
-    background-color: var(--secondLower);
-}
-.currentNavTab:hover{
-    padding-left: 6%;
-}

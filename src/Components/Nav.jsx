@@ -1,32 +1,40 @@
-import { tab } from "@testing-library/user-event/dist/tab";
-import { useState } from "react";
-import { currentTab } from "../App";
 import "../CSS/components.css";
 import "../CSS/global.css";
+import { currentTab } from "../App";
 
-function NavTab(props){;
+const navStyles = {
+    width: "20%",
+    padding: "3vw",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    borderRadius: "1em 0 0 1em",
+    backgroundColor: "var(--nav)"
+}
+
+
+function NavTab(props){
     return (
-    <div className={`NavTab ${(props.current === props.content) ? "currentNavTab" : ""}`}>
-        <h3 onClick={() => {props.function()}} className="Heading">{props.content}</h3>
+    <div onClick={() => {props.function()}} className={`NavTab ${(props.current === props.content) ? "currentNavTab" : ""}`}>
+        <h3 className="Heading">{props.content}</h3>
     </div>
     );
 }
 function NavTabContainer(props){
-    const [current, setCurrent] = useState("Home");
     return (
     <div className="tabContainer">
-        <NavTab function={() => {props.updateTab("Home") }} current={current} content="Home"/>
-        <NavTab function={() => {props.updateTab("School"); }} current={current} content="School"/>
-        <NavTab function={() => {props.updateTab("Work"); }} current={current} content="Work"/>
+        <NavTab function={() => {props.updateTab("Home") }} current={currentTab} content="Home"/>
+        <NavTab function={() => {props.updateTab("School"); }} current={currentTab} content="School"/>
+        <NavTab function={() => {props.updateTab("Work"); }} current={currentTab} content="Work"/>
     </div>);
 }
 function Nav(props){
     return (
-        <nav>
+        <nav style={navStyles}>
             <NavTabContainer updateTab={(text) => {props.function(text)}} />
             <div className="miscButtons" style={{                    
                     color: "var(--second)",
-                    borderTop: "solid 2px var(--first)",
+                    borderTop: "solid 2px var(--underline)",
                     paddingTop: "2%",
                     display: "flex",
                     justifyContent: "flex-end"}}>  

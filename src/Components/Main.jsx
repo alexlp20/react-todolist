@@ -1,30 +1,52 @@
-import { useState } from "react";
 import { currentTab } from "../App";
+import Task from "./Task";
+
+const mainStyles = {
+    width: "70%",
+    padding: "3vw",
+    borderRadius: "0 1em 1em 0",
+    backgroundColor: "var(--main)"
+}
 
 function HeaderOfTaskSection(props){
     return(
         <div 
-        className="AddTaskSection" 
-        style={{
-            borderBottom: "solid 2px var(--middle)",
-            paddingBottom: "1.4%",
-        }}>
+        className="AddTaskSection">
             <h2 
             style={{
-                letterSpacing: "0.1em",
+                width: "25%",
+                padding: "1%",
                 fontSize: "2.2vw",
-                fontFamily: "Comfortaa, sans-serif", 
-                fontWeight: "lighter",
-                color: "var(--second)",}}
+                fontFamily: "'Poppins', sans-serif", 
+                fontWeight: "bolder",
+                boxSizing: "border-box",
+                color: "var(--blue)",
+                backgroundColor: "var(--darker)",
+                textAlign: "center",
+                borderRadius: "0.2em"    
+            }}
             >{currentTab}   
             </h2>
         </div>
     );
 }
+
 function Main(props){
     return (
-        <main>
+        <main style={mainStyles}>
             <HeaderOfTaskSection currentTab={currentTab}/>
+            <div className="TaskContainer" style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+
+                padding: "2vw",
+                height: "auto",
+                borderBottom: "solid 2px var(--blue)",
+                
+            }}>                
+                <Task title="Test Task"/>
+            </div>
         </main>
     );   
 }
