@@ -5,7 +5,7 @@ const taskStyles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    background: "var(--darker)",
+    background: "var(--nav)",
     color: "var(--underline)",
     borderRadius: "0.3em",
     paddingLeft: "2%",
@@ -14,10 +14,10 @@ const taskStyles = {
 }
 function Task(props) {
     return (
-        <div style={taskStyles}>
+        <div style={taskStyles} >
             <h3 style={{fontWeight: "normal"}}>{props.title}</h3>
             <div className="icons" style={{marginInline: "3%"}}>
-                <span className="material-symbols-outlined taskIcon">delete</span>
+                <span onClick={(task) => {props.deleteFunction(task)}} className="material-symbols-outlined taskIcon">delete</span>
                 <span className="material-symbols-outlined taskIcon">done</span>
             </div>
         </div>

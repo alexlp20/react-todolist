@@ -22,7 +22,7 @@ function HeaderOfTaskSection(props){
                 fontWeight: "bolder",
                 boxSizing: "border-box",
                 color: "var(--mainColor)",
-                backgroundColor: "var(--darker)",
+                backgroundColor: "var(--nav)",
                 textAlign: "center",
                 borderRadius: "0.2em",
                 paddingBlock: "0.3em",
@@ -53,6 +53,11 @@ function Main(props){
         
         setTaskContent("");
 
+    }
+    function deleteTask(task){
+        console.log(task);
+        const updatedArray = tasks.filter((i) => {return i !== task});
+        setTasks(updatedArray);
     }
     return (
         <main style={mainStyles}>
@@ -93,7 +98,7 @@ function Main(props){
                             fontSize: "1vw",
                         }}>Add Task</button>
                     </div>
-                    {tasks.map((i) => {return <Task title={i} />})}
+                    {tasks.map((task) => {return <Task title={task} deleteFunction={() => {deleteTask(task)}}/>})}
                 </div>        
             </div>                
         </main>
