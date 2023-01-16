@@ -1,6 +1,6 @@
 
 const taskStyles = {
-    width: "30%",
+    width: "40%",
     height: "7vh",
     display: "flex",
     justifyContent: "space-between",

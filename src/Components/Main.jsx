@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { currentTab } from "../App";
-import Task from "./Task";
+import TaskContainer from "./TaskContainer"
 
 const mainStyles = {
     width: "70%",
@@ -43,11 +43,12 @@ function Main(props){
             setTaskContent("");
             return;
         }
-        if(newTask.length > 18){
+        if(newTask.length > 25){
             alert("Task title is too long.");
             setTaskContent("");
             return;
         }
+        console.log(tasks)
         tasks.push(newTask);
         setTasks(tasks);
         
@@ -62,45 +63,13 @@ function Main(props){
     return (
         <main style={mainStyles}>
             <HeaderOfTaskSection currentTab={currentTab}/>
-           
-            <div className="TaskContainer" style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-
-                padding: "2vw",
-                height: "auto",
-                borderTop: "solid 2px rgb(29, 29, 29)",
-                
-            }}>  
-                <div className="toDoTaskContainer" style={{width: "100%"}}>
-                    <div className="createTaskContainer">
-                        <input style={{
-                            width: "76%", 
-                            height: "3vw", 
-                            fontSize: "1vw",
-                            backgroundColor: "rgb(20, 20, 20)", 
-                            border: "none", 
-                            borderRadius: "0.4em",
-                            paddingInline: "1em",
-                            color: "var(--secondLower)"
-                                }} placeholder="Enter a task..." type="text" value={taskContent} 
-                                onChange={
-                                    /* i access to the input content every time its updated, and update taskContent*/
-                                    (e) => {setTaskContent(e.target.value)}
-                                    }/>
-                        <button id="addBtn" onClick={() => addTask(taskContent)} style={{
-                            marginInlineStart: "1em",
-                            width: "20%",
-                            height: "3vw",
-                            borderRadius: "0.5em",
-                            fontWeight: "600",
-                            fontSize: "1vw",
-                        }}>Add Task</button>
-                    </div>
-                    {tasks.map((task) => {return <Task title={task} deleteFunction={() => {deleteTask(task)}}/>})}
-                </div>        
-            </div>                
+            <TaskContainer 
+                taskContent={taskContent}
+                setTaskContentFunction={(e) => setTaskContent(e)}
+                addTaskFunction={() => addTask(taskContent)}
+                deleteTaskFunction={(task) => deleteTask(task)}
+                tasks={tasks}
+            />
         </main>
     );   
 }
