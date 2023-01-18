@@ -1,3 +1,12 @@
+nav{
+    width: 20%;
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1em 0 0 1em;
+    background-color: var(--nav);
+}
 .NavTab{
     color: var(--underline);
     padding-left: 5%;
@@ -42,6 +51,12 @@
     margin-bottom: 1em;
 }
 #addBtn{
+    margin-inline-start: 1em;
+    width: 20%;
+    height: 3vw;
+    border-radius: 0.5em;
+    font-size: 1vw;
+
     transition: all 200ms; 
     background-color: rgb(20, 20, 20); 
     color: rgb(65, 65, 65); 
@@ -50,4 +65,45 @@
 #addBtn:hover{
     color: var(--mainColor);
     cursor: pointer;
+}
+/* MAIN FILE */
+main{
+    width: 70%;
+    padding: 3vw;
+    border-radius: 0 1em 1em 0;
+}
+.headerOfTaskSection > h2{
+    width: 25%;
+    padding: 1%;
+    font-size: 2.2vw;
+    border-radius: 0.2em;
+    padding-block: 0.3em;
+    margin-bottom: 1em;
+}
+
+/* TASK CONTAINER FILE */
+.createTaskContainer > input {
+    width: 76%;
+    height: 3vw;
+    font-size: 1vw;
+    border-radius: 0.4em;
+    padding-inline: 1em;
+}
+
+@media (orientation: portrait) {
+    nav{
+        display: none;
+    }
+    main{
+        width: 100%;
+        border-radius: 1em;
+    }
+    .headerOfTaskSection{display: flex; justify-content: center; width: 100%;}
+    .headerOfTaskSection > h2{
+        font-size: 5vh;
+        width: auto;
+        padding-inline: 1.5em;
+    }
+
+     
 }

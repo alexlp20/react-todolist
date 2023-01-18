@@ -2,16 +2,6 @@ import "../CSS/components.css";
 import "../CSS/global.css";
 import { currentTab } from "../App";
 
-const navStyles = {
-    width: "20%",
-    padding: "3vw",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    borderRadius: "1em 0 0 1em",
-    backgroundColor: "var(--nav)"
-}
-
 
 function NavTab(props){
     return (
@@ -30,7 +20,7 @@ function NavTabContainer(props){
 }
 function Nav(props){
     return (
-        <nav style={navStyles}>
+        <nav>
             <NavTabContainer updateTab={(text) => {props.function(text)}} />
             <div className="miscButtons" style={{                    
                     color: "var(--second)",

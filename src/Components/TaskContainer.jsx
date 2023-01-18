@@ -14,13 +14,8 @@ function TaskContainer(props){
             <div className="toDoTaskContainer" style={{width: "100%"}}>
                 <div className="createTaskContainer">
                     <input style={{
-                        width: "76%", 
-                        height: "3vw", 
-                        fontSize: "1vw",
                         backgroundColor: "rgb(20, 20, 20)", 
                         border: "none", 
-                        borderRadius: "0.4em",
-                        paddingInline: "1em",
                         color: "var(--secondLower)"
                             }} placeholder="Enter a task..." type="text" value={props.taskContent} 
                             onChange={
@@ -28,15 +23,10 @@ function TaskContainer(props){
                                 (e) => {props.setTaskContentFunction(e.target.value)}
                                 }/>
                     <button id="addBtn" onClick={() => props.addTaskFunction(props.taskContent)} style={{
-                        marginInlineStart: "1em",
-                        width: "20%",
-                        height: "3vw",
-                        borderRadius: "0.5em",
                         fontWeight: "600",
-                        fontSize: "1vw",
                     }}>Add Task</button>
                 </div>
-                {props.tasks.map((task) => {return <Task title={task} deleteFunction={() => {props.deleteTaskFunction(task)}}/>})}
+                {props.tasks.map((task) => {if(task.tab === props.currentTab) {return <Task title={task.content} deleteFunction={() => {props.deleteTaskFunction(task)}}/>}})}
             </div>        
         </div>         
     );
