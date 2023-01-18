@@ -11,8 +11,9 @@ function TaskContainer(props){
             borderTop: "solid 2px rgb(29, 29, 29)",
             
         }}>  
-            <div className="toDoTaskContainer" style={{width: "100%"}}>
+            <div className="toDoTaskContainer">
                 <div className="createTaskContainer">
+                    <h3 className="charCounter" style={{color: (props.taskContent.length > 25 || props.taskContent.length < 1) ?  'rgb(40, 40, 40)' : ""}}>{props.taskContent.length}</h3>
                     <input style={{
                         backgroundColor: "rgb(20, 20, 20)", 
                         border: "none", 
@@ -22,6 +23,7 @@ function TaskContainer(props){
                                 /* i access to the input content every time its updated, and update taskContent*/
                                 (e) => {props.setTaskContentFunction(e.target.value)}
                                 }/>
+                    <div className="tasks"></div>
                     <button id="addBtn" onClick={() => props.addTaskFunction(props.taskContent)} style={{
                         fontWeight: "600",
                     }}>Add Task</button>
