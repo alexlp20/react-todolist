@@ -1,6 +1,6 @@
 import "../CSS/components.css";
 import "../CSS/global.css";
-import { currentTab } from "../App";
+import { currentTab, tabsArray } from "../App";
 
 
 function NavTab(props){
@@ -13,15 +13,13 @@ function NavTab(props){
 function NavTabContainer(props){
     return (
     <div className="tabContainer">
-        <NavTab function={() => {props.updateTab("Home") }} current={currentTab} content="Home"/>
-        <NavTab function={() => {props.updateTab("School"); }} current={currentTab} content="School"/>
-        <NavTab function={() => {props.updateTab("Work"); }} current={currentTab} content="Work"/>
+        {props.tabs.map((tab) => { return <NavTab content={tab} function={() => {props.updateTab(tab)}} current={currentTab} />})}
     </div>);
 }
 function Nav(props){
     return (
         <nav>
-            <NavTabContainer updateTab={(text) => {props.function(text)}} />
+            <NavTabContainer tabs={tabsArray} updateTab={(text) => {props.function(text)}} />
             <div className="miscButtons" style={{                    
                     color: "var(--second)",
                     borderTop: "solid 2px var(--underline)",

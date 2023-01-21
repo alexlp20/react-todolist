@@ -84,6 +84,9 @@ main{
 }
 
 /* TASK CONTAINER FILE */
+.createTaskContainer{
+    border-radius: 1.6em;
+}
 .createTaskContainer > input {
     width: 70%;
     height: 3vw;
@@ -94,6 +97,7 @@ main{
 .charCounter{
     width: 7%;
     height: 3vw;
+    font-size: 1vw;
     background-color: rgb(20, 20, 20);
     border-radius: 0.6em;
     display: flex;
@@ -122,6 +126,13 @@ main{
 .createTaskContainer{
     width: 65%;
     overflow: wrap;
+    border-radius: 0.5em;
+}
+.tabSelector{
+    display: none;
+}
+.mobileNav{
+    display: none
 }
 @media (orientation: portrait) {
     nav{
@@ -131,12 +142,18 @@ main{
         width: 100%;
         border-radius: 1em;
     }
-    .headerOfTaskSection{display: flex; justify-content: center; width: 100%;}
+    .headerOfTaskSection{
+        display: flex; 
+        justify-content: space-between; 
+        /* align-items: center; */
+        width: 100%;
+        padding-inline: 0.5em;
+    }
     .headerOfTaskSection > h2{
-        font-size: 5vh;
-        width: auto;
-        padding-inline: 1.5em;
+        font-size: 4vh;
+        width: 45vw;
         margin-bottom: 0.3em;
+        text-align: center;
     }
 
     .charCounter{
@@ -146,7 +163,7 @@ main{
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 5vh;
+        
         width: 100%;
     }
     .createTaskContainer > input{
@@ -168,6 +185,7 @@ main{
         border-radius: 1vh;
         font-size: 2vh;
         padding-left: 2vh;
+        margin-top: 1em;
     }
     .task > h3 {
         max-width: 70%;
@@ -175,5 +193,38 @@ main{
     }
     .taskIcon{
         font-size: 2.5vh;
+    }
+    .tabSelector{
+        border-radius: 0.3em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 8vh;
+        background-color: var(--nav);
+        gap: 3vw;
+    }
+    .mobileTab{
+        color: var(--mainColor);
+        padding: 0.7em;
+        font-size: 2vh;
+        font-weight: bolder;
+        background-color: rgb(20, 20, 20);
+        border: none;
+        border-radius: 0.4em;
+    }
+    .mobileNav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 38%;
+        height: auto;
+        background-color: var(--nav);
+        margin-bottom: 1.2vh;
+        border-radius: 0.4em;
+    }
+    .icon {
+        font-size: 2.8vh;
     }
 }
