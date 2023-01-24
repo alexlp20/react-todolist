@@ -17,8 +17,8 @@ const appStyles = {
 export var currentTab; 
 export var tabsArray;
 function App() {
-  const [current, setCurrent] = useState("Home");  
-  const [tabs, setTabs] = useState(["Home", "School", "Work"]);
+  const [tabs, setTabs] = useState([{tab: "Home", type: "taskTab"},{tab: "School", type: "taskTab"}, {tab: "Work", type: "taskTab"}]);  
+  const [current, setCurrent] = useState(tabs[0].tab);  
   currentTab = current;
   tabsArray = tabs;
   return (
