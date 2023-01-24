@@ -1,4 +1,5 @@
 import Task from "./Task";
+import { tabsArray } from "../App";
 function TaskContainer(props){
     return (
         <div className="TaskContainer" style={{
@@ -13,7 +14,7 @@ function TaskContainer(props){
         }}>  
             <div className="toDoTaskContainer">
                 <div className="createTaskContainer">
-                    <h3 className="charCounter" style={{color: (props.taskContent.length > 25 || props.taskContent.length < 1) ?  'rgb(40, 40, 40)' : ""}}>{props.taskContent.length}</h3>
+                    <h3 className="charCounter" style={{color: (props.taskContent.length > 35 || props.taskContent.length < 1) ?  'rgb(40, 40, 40)' : ""}}>{props.taskContent.length}</h3>
                     <input style={{
                         backgroundColor: "rgb(20, 20, 20)", 
                         border: "none", 
@@ -27,8 +28,12 @@ function TaskContainer(props){
                     <button id="addBtn" onClick={() => props.addTaskFunction(props.taskContent)} style={{
                         fontWeight: "600",
                     }}>Add Task</button>
-                </div>
-                {props.tasks.map((task) => {if(task.tab === props.currentTab) {return <Task title={task.content} deleteFunction={() => {props.deleteTaskFunction(task)}}/>}})}
+                             </div>        
+                {/* THIS IS ONLY FOR PORTRAIT DEVICES  */}
+                <nav className="tabSelector">
+                    {tabsArray.map((tab) => {return(<button onClick={() => {props.updateTab(tab)}}className="mobileTab" style={{color: (props.currentTab === tab) ? "white" : "var(--mainColor)"}}>{tab}</button>)})}
+                </nav>
+                <div className="tasks"> {props.tasks.map((task) => {if(task.tab === props.currentTab) {return <Task title={task.content} deleteFunction={() => {props.deleteTaskFunction(task)}}/>}})}</div>
             </div>        
         </div>         
     );

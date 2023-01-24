@@ -1,7 +1,6 @@
 import "../CSS/components.css";
 import "../CSS/global.css";
-import { currentTab } from "../App";
-
+import { currentTab, tabsArray } from "../App";
 
 function NavTab(props){
     return (

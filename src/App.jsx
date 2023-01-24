@@ -15,13 +15,17 @@ const appStyles = {
 }
 
 export var currentTab; 
+export var tabsArray;
+
 function App() {
   const [current, setCurrent] = useState("Home");  
+  const [tabs, setTabs] = useState(["Home", "School", "Work"]);  
   currentTab = current;
+  tabsArray = tabs;
   return (
     <div className="App" style={appStyles}>
       <Nav function={(text) => {setCurrent(text)}} />
-      <Main />
+      <Main function={(text) => {setCurrent(text)}}/>
     </div>
   );
 }
