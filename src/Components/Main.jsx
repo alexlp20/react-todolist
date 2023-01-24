@@ -18,11 +18,6 @@ function HeaderOfTaskSection(props){
             }}
             >{currentTab}   
             </h2>
-            <div className="mobileNav">
-                <span className="material-symbols-outlined icon">info</span>
-                <span className="material-symbols-outlined icon">settings</span>
-                <span className="material-symbols-outlined icon">palette</span>
-            </div>
         </div>
     );
 }
@@ -67,7 +62,6 @@ function Main(props){
                 deleteTaskFunction={(task) => deleteTask(task)}
                 tasks={tasks}
                 currentTab={currentTab}
-                updateTab={(text) => {props.function(text);}}
             />
         </main>
     );   

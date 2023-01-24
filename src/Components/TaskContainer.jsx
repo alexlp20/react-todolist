@@ -1,4 +1,3 @@
-import { tabsArray } from "../App";
 import Task from "./Task";
 function TaskContainer(props){
     return (
@@ -28,11 +27,8 @@ function TaskContainer(props){
                     <button id="addBtn" onClick={() => props.addTaskFunction(props.taskContent)} style={{
                         fontWeight: "600",
                     }}>Add Task</button>
-                </div>                      
-                <nav className="tabSelector">
-                    {tabsArray.map((tab) => {return(<button onClick={() => {props.updateTab(tab)}}className="mobileTab" style={{color: (props.currentTab === tab) ? "white" : "var(--mainColor)"}}>{tab}</button>)})}
-                </nav>
-                <div className="tasks"> {props.tasks.map((task) => {if(task.tab === props.currentTab) {return <Task title={task.content} deleteFunction={() => {props.deleteTaskFunction(task)}}/>}})}</div>
+                </div>
+                {props.tasks.map((task) => {if(task.tab === props.currentTab) {return <Task title={task.content} deleteFunction={() => {props.deleteTaskFunction(task)}}/>}})}
             </div>        
         </div>         
     );
