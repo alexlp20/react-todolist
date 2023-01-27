@@ -3,6 +3,9 @@
     THIS FILE IS USED TO DEFINE 
     THE GENERAL STYLES OF THE APP
 */
+*{
+    transition: color 500ms;
+}
 input:focus-visible, input:focus{
     outline: none;
 }
@@ -22,6 +25,7 @@ input:focus-visible, input:focus{
     transition: all 750ms ease-in-out;
 }
 .icon:hover{color: var(--secondLower); cursor: pointer; rotate: 360deg;}
+.arrowBack:hover{transform: translateX(-20%); rotate: 0deg;}
 .taskIcon {    
     margin: 0.3vw;
     color:var(--mainColor);
@@ -49,7 +53,7 @@ input:focus-visible, input:focus{
     --main: rgb(20, 20, 20);
     --nav: rgb(29, 29, 29);
     --underline: rgb(221, 221, 221);
-    --mainColor: rgb(82, 200, 255);
+    --mainColor: #52c8ff;
     --secondLower: rgb(255, 255, 255);
     --darker: rgb(30, 30, 30);
 
