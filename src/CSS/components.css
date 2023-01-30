@@ -5,7 +5,7 @@ nav{
     flex-direction: column;
     justify-content: space-between;
     border-radius: 1em 0 0 1em;
-    background-color: var(--nav);
+    background-color: var(--background);
 }
 .NavTab{
     color: var(--underline);
@@ -20,9 +20,9 @@ nav{
     font-size: 1.9vh;
 }
 .NavTab:hover{
-    color: var(--secondLower);
+    color: var(--underline);
     padding-left: 20%;
-    border-bottom-color: var(--secondLower);
+    border-bottom-color: var(--underline);
     cursor: pointer;
 }
 
@@ -47,7 +47,7 @@ nav{
     height: 10vh;
     padding: 1vw;
     border-radius: 0.7em;
-    background-color: var(--nav);
+    background-color: var(--background);
     margin-bottom: 1em;
     display: flex;
     justify-content: space-between;
@@ -60,8 +60,8 @@ nav{
     font-size: 1vw;
 
     transition: all 200ms; 
-    background-color: rgb(20, 20, 20); 
-    color: rgb(65, 65, 65); 
+    background-color: var(--backgroundDark); 
+    color: var(--button); 
     border: transparent;
 }
 #addBtn:hover{
@@ -105,7 +105,7 @@ main{
     width: 7%;
     height: 3vw;
     font-size: 1vw;
-    background-color: rgb(20, 20, 20);
+    background-color: var(--backgroundDark);
     border-radius: 0.6em;
     display: flex;
     align-items: center;
@@ -120,7 +120,7 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--nav);
+    background-color: var(--background);
     color: var(--underline);
     border-radius: 0.3em;
     padding-left: 2%;
@@ -213,7 +213,7 @@ main{
         align-items: center;
         width: 100%;
         height: 8vh;
-        background-color: var(--nav);
+        background-color: var(--background);
         gap: 3vw;
     }
     .mobileTab{
@@ -221,7 +221,7 @@ main{
         padding: 0.7em;
         font-size: 2vh;
         font-weight: bolder;
-        background-color: rgb(20, 20, 20);
+        background-color: var(--backgroundDark);
         border: none;
         border-radius: 0.4em;
     }
@@ -231,7 +231,7 @@ main{
         justify-content: space-around;
         width: 38%;
         height: auto;
-        background-color: var(--nav);
+        background-color: var(--background);
         margin-bottom: 1.2vh;
         border-radius: 0.4em;
     }
@@ -249,13 +249,13 @@ main{
         min-height: 50%;
         width: 100%;
         border-radius: 0.5em;
-        background-color: var(--nav);
+        background-color: var(--background);
         padding: 1.5em;
     }
     h4 {
         font-size: 2.5vh;
         color: var(--underline);
-        background-color: rgb(20, 20, 20);
+        background-color: var(--backgroundDark);
         text-align: center;
         padding: 0.4em;
         padding-block: 1em;
@@ -268,19 +268,19 @@ main{
     }
     .infoDiv, .paletteDiv{
         color: var(--underline);
-        background-color: rgb(20, 20, 20);
+        background-color: var(--backgroundDark);
         margin-top: 2vh;
         text-align: justify;
         padding: 1em;
         padding-block: 1em;
         border-radius: 0.5em;
         font-size: 1.8vh;
-    }
+    } 
     .infoBtns{
         width: 100%;
         margin-top: 3vh;
         height: 9vh;
-        background-color: rgb(20, 20, 20);
+        background-color: var(--backgroundDark);
         border-radius: 0.5em;
         display: flex;
         align-items: center;
@@ -312,15 +312,8 @@ main{
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--nav);
+        background-color: var(--background);
         border-radius: 0.3em;
         margin-inline: 0.8em;
     }
-    .palettes > div {
-        display: flex;
-        margin-top: 1vh;
-    }
-    .palette > .color{border-radius: 0;}
-    .palette > .color:first-child{border-radius: 0.3em 0 0 0.3em;}
-    .palette > .color:nth-child(5){border-radius: 0 0.3em 0.3em 0;}
 }

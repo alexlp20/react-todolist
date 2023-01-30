@@ -4,7 +4,7 @@
     THE GENERAL STYLES OF THE APP
 */
 *{
-    transition: color 500ms;
+    transition: color 500ms, background-color 500ms, 
 }
 input:focus-visible, input:focus{
     outline: none;
@@ -24,7 +24,7 @@ input:focus-visible, input:focus{
 
     transition: all 750ms ease-in-out;
 }
-.icon:hover{color: var(--secondLower); cursor: pointer; rotate: 360deg;}
+.icon:hover{color: var(--underline); cursor: pointer; rotate: 360deg;}
 .arrowBack:hover{transform: translateX(-20%); rotate: 0deg;}
 .taskIcon {    
     margin: 0.3vw;
@@ -48,17 +48,22 @@ input:focus-visible, input:focus{
     padding: 0;
     box-sizing: border-box;
 }
+.App{
+    background-color: var(--appBackground);
+}
 :root{
-    --appBackground: rgb(14, 14, 14);
-    --main: rgb(20, 20, 20);
-    --nav: rgb(29, 29, 29);
-    --underline: rgb(221, 221, 221);
+    --appBackground: #0e0e0e;
+    --backgroundDark: #141414;
+    --background: #1d1d1d;
+    --underline: #dddddd;
     --mainColor: #52c8ff;
-    --secondLower: rgb(255, 255, 255);
-    --darker: rgb(30, 30, 30);
 
-    --accept: rgb(35, 195, 29);
-    --delete: rgb(222, 0, 0);
+    --button: #414141;
+/*     --appBackground: #FFE6B8;
+    --backgroundDark: #e9d3a9;
+    --background: #cfb990;
+    --underline: #111111;
+    --mainColor: #6c5934; */
 }
 /* 
     ALL DEFAULT STYLES 

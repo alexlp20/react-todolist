@@ -14,7 +14,7 @@ function HeaderOfTaskSection(props){
                 fontWeight: "bolder",
                 boxSizing: "border-box",
                 color: "var(--mainColor)",
-                backgroundColor: "var(--nav)",
+                backgroundColor: "var(--background)",
                 textAlign: "center",
             }}
             >{currentTab}   
@@ -60,7 +60,7 @@ function Main(props){
     }
     if (currentTab === "Home" || currentTab === "School" || currentTab === "Work"){    
         return (
-            <main style={{backgroundColor: "var(--main"}}>
+            <main style={{backgroundColor: "var(--backgroundDark"}}>
                 <HeaderOfTaskSection function={(tab) => {props.function(tab);}} currentTab={currentTab}/>
                 <TaskContainer 
                     taskContent={taskContent}
@@ -75,13 +75,13 @@ function Main(props){
         ); 
     } else {
         return (
-            <main style={{backgroundColor: "var(--main"}}>
+            <main style={{backgroundColor: "var(--backgroundDark"}}>
                 <h2 style={{
                     fontFamily: "'Poppins', sans-serif", 
                     fontWeight: "bolder",
                     boxSizing: "border-box",
                     color: "var(--mainColor)",
-                    backgroundColor: "var(--nav)",
+                    backgroundColor: "var(--background)",
                     textAlign: "center",
                 }} className="configHeading">{currentTab}</h2>
                 <div className="configDiv">                

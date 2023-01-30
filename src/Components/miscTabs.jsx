@@ -33,10 +33,6 @@ export function SettingsTab(props){
 }
 export function PaletteTab(props) {
     const colorArray = ["#D452FF", "#52C8FF", "#69FF52", "#FFE252", "#FF9D52", "#FF5252", "#FFFFFF"];
-    const palettes = [
-        ["#D452FF", "#52C8FF", "#69FF52", "#FFE252", "#FF9D52"], 
-        ["#D452FF", "#52C8FF", "#69FF52", "#FFE252", "#FF9D52"], 
-        ["#D452FF", "#52C8FF", "#69FF52", "#FFE252", "#FF9D52"]];
     return (
         <div>
             <div className="paletteDiv">
@@ -50,14 +46,22 @@ export function PaletteTab(props) {
             <div className="paletteDiv">
                 <h5 style={{textAlign:"center", fontSize: "1.8vh"}}>CHANGE <span style={{color: "var(--mainColor)"}}>THEME</span></h5>
                 <div className="themeDiv">
-                    <span className="material-symbols-outlined icon">light_mode</span>
-                    <span className="material-symbols-outlined icon">dark_mode</span>
-                </div>
-            </div>
-            <div className="paletteDiv">
-                <h5 style={{textAlign:"center", fontSize: "1.8vh"}}>PREDEFINED  <span style={{color: "var(--mainColor)"}}>PALETTES</span></h5>
-                <div className="palettes">
-                    {palettes.map((palette) => {return (<div className="palette"> <h5 style={{marginInlineStart: "1em", backgroundColor: "var(--nav)", padding: "0.3em", borderRadius: "0.4em"}}>Palette_Name</h5>{palette.map((color) => {return (<div className="color" style={{backgroundColor: color}}></div>)})} <br /></div> )})}
+                    <span className="material-symbols-outlined icon" 
+                    onClick={() => {
+                        document.documentElement.style.setProperty("--appBackground", "white");
+                        document.documentElement.style.setProperty("--backgroundDark", "#dddddd");
+                        document.documentElement.style.setProperty("--background", "#c0c0c0");
+                        document.documentElement.style.setProperty("--underline", "#525252");
+                        document.documentElement.style.setProperty("--mainColor", "#888888");
+                        }}>light_mode</span>
+                    <span className="material-symbols-outlined icon"                     
+                    onClick={() => {
+                        document.documentElement.style.setProperty("--appBackground", "#0e0e0e");
+                        document.documentElement.style.setProperty("--backgroundDark", "#141414");
+                        document.documentElement.style.setProperty("--background", "#1d1d1d");
+                        document.documentElement.style.setProperty("--underline", "#dddddd");
+                        document.documentElement.style.setProperty("--mainColor", "#52c8ff");
+                        }}>dark_mode</span>
                 </div>
             </div>
             <div className="infoBtns">

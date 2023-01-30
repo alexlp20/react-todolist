@@ -11,7 +11,6 @@ const appStyles = {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "stretch",
-    backgroundColor: "var(--appBackground)",
 }
 
 export var currentTab; 
