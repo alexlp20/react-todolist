@@ -19,32 +19,20 @@ export function InfoTab (props){
         </div>
     );
 }
-export function SettingsTab(props){
-    return(
-        <div>
-            <h2>test</h2>
-            <div className="infoBtns">
-                <span className="material-symbols-outlined icon arrowBack" onClick={() => {props.function("Home")}}>arrow_back</span>
-                <a href="https://github.com/alexlp20/" target="_blank" rel="noreferrer"><i className="fa fa-github icon" style={{fontSize: "4vh"}}></i></a>
-                 {/* I had to use font awesome icons, bcause couldnt find it in google icons*/}
-            </div>
-        </div>
-    );
-}
 export function PaletteTab(props) {
     const colorArray = ["#D452FF", "#52C8FF", "#69FF52", "#FFE252", "#FF9D52", "#FF5252", "#FFFFFF"];
     return (
         <div>
             <div className="paletteDiv">
                 <div className="highlightColorSelector">
-                    <h5 style={{textAlign:"center", fontSize: "1.8vh"}}>CHANGE <span style={{color: "var(--mainColor)"}}>MAIN</span> COLOR</h5>
+                    <h5 style={{textAlign:"center"}}>CHANGE <span style={{color: "var(--mainColor)"}}>MAIN</span> COLOR</h5>
                     <div className="colors">
                         {colorArray.map((color) => {return (<div className="color" onClick={() => {document.documentElement.style.setProperty("--mainColor", color)}} style={{backgroundColor: color}}></div>) })}
                     </div>
                 </div>
             </div>                
             <div className="paletteDiv">
-                <h5 style={{textAlign:"center", fontSize: "1.8vh"}}>CHANGE <span style={{color: "var(--mainColor)"}}>THEME</span></h5>
+                <h5 style={{textAlign:"center"}}>CHANGE <span style={{color: "var(--mainColor)"}}>THEME</span></h5>
                 <div className="themeDiv">
                     <span className="material-symbols-outlined icon" 
                     onClick={() => {

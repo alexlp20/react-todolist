@@ -27,9 +27,8 @@ function Nav(props){
                     paddingTop: "2%",
                     display: "flex",
                     justifyContent: "flex-end"}}>  
-                <span className="material-symbols-outlined icon">info</span>
-                <span className="material-symbols-outlined icon">settings</span>
-                <span className="material-symbols-outlined icon">palette</span>
+                <span className="material-symbols-outlined icon" onClick={() => {props.function("Info")}}>info</span>
+                <span className="material-symbols-outlined icon" onClick={() => {props.function("Palette")}}>palette</span>
             </div>
         </nav>
     );

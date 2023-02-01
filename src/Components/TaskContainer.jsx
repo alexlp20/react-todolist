@@ -24,7 +24,6 @@ function TaskContainer(props){
                                 /* i access to the input content every time its updated, and update taskContent*/
                                 (e) => {props.setTaskContentFunction(e.target.value)}
                                 }/>
-                    <div className="tasks"></div>
                     <button id="addBtn" onClick={() => props.addTaskFunction(props.taskContent)} style={{
                         fontWeight: "600",
                     }}>Add Task</button>

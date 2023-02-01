@@ -50,6 +50,7 @@ input:focus-visible, input:focus{
 }
 .App{
     background-color: var(--appBackground);
+    overflow: hidden;
 }
 :root{
     --appBackground: #0e0e0e;
@@ -59,17 +60,30 @@ input:focus-visible, input:focus{
     --mainColor: #52c8ff;
 
     --button: #414141;
-/*     --appBackground: #FFE6B8;
-    --backgroundDark: #e9d3a9;
-    --background: #cfb990;
-    --underline: #111111;
-    --mainColor: #6c5934; */
 }
-/* 
-    ALL DEFAULT STYLES 
-    START WITH CAPITAL LETTER
-*/
 
 .Heading{
     font-weight: 700;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+scrollbar-width: auto;
+scrollbar-color: var(--mainColor) rgba(0, 0, 0, 0);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+background: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: var(--mainColor);
+border-radius: 10px;
+border: 5px solid  var(--background);
 }

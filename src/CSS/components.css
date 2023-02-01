@@ -87,6 +87,7 @@ main{
 .createTaskContainer{
     border-radius: 1.6em;
     border-radius: 0.5em;
+    
 }
 .tabSelector{
     display: none;
@@ -114,9 +115,20 @@ main{
     color: var(--mainColor);
     transition: all 150ms;
 }
+.tasks{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-height: 55vh;
+}
 .task{
-    width: 40%;
-    height: 7vh;
+    width: 45%;
+    margin-inline: 0.5em;
+    min-width: 40%;
+    height: 8vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,20 +138,133 @@ main{
     padding-left: 2%;
     font-size: 1vw;
     margin-bottom: 1vw;
+    flex-grow: 1;
 }
 .task > h3 {
     max-width: 70%;
     overflow-wrap: break-word;
 }
 .toDoTaskContainer{
-    width: 100%;
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: scroll;
 }
+
 .createTaskContainer{
-    width: 65%;
+    width: 85%;
     overflow: wrap;
 }
 .configHeading{
     color: var(--mainColor);
+}
+a {
+    text-decoration: underline;
+    color: var(--mainColor);
+}
+.infoDiv, .paletteDiv{
+    color: var(--underline);
+    background-color: var(--backgroundDark);
+    margin-top: 2vh;
+    text-align: justify;
+    padding: 1em;
+    padding-block: 1em;
+    border-radius: 0.5em;
+    font-size: 1.8vh;
+} 
+.infoBtns{
+    width: 100%;
+    margin-top: 3vh;
+    height: 9vh;
+    background-color: var(--backgroundDark);
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2vh;
+}
+.colors{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.color{
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+}
+.themeDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+
+}
+.themeDiv > span{
+    width: 33%;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    border-radius: 0.3em;
+    margin-inline: 0.8em;
+}
+@media (orientation: landscape){
+    .paletteDiv{
+        background-color: var(--background);
+        margin-inline: 15vw;
+        margin-top: 3vw;
+    }
+    .colors{
+        justify-content: center;
+        gap: 2em;
+    }
+    .color{
+        width: 2vw;
+        height: 2vw;
+    }
+    .color:hover{
+        cursor: pointer;
+    }
+    h5{
+        font-size: 1.3vw;
+        margin-bottom: 1vw;
+    }
+    .themeDiv > span{
+        background: none;
+        background-color: transparent;
+        font-size: 2vw;
+    }
+    h2{
+        font-size: 2.5vw;
+        margin-inline: 20vw;
+        border-radius: 0.2em;
+    }
+    .infoBtns{
+        padding-inline: 15vw;
+        
+    }
+    .infoDiv{
+        margin-inline: 15vw;
+        background-color: var(--background);
+        font-size: 1.1vw;
+    }
+    .configDiv h4{
+        color: var(--underline);
+        margin-inline: 15vw;
+        text-align: center;
+        font-size: 1.5vw;
+        margin-top: 4vw;
+        margin-bottom: 2vw;
+        background-color: var(--background);
+        padding-block: 0.5vw;
+        border-radius: 0.2em;
+    }
 }
 @media (orientation: portrait) {
     nav{
@@ -190,7 +315,7 @@ main{
         overflow: hidden;
     }
     .task{
-        width: 100%;
+        width: 90%;
         height: auto;
         min-height: 8vh;
         border-radius: 1vh;
@@ -261,59 +386,8 @@ main{
         padding-block: 1em;
         border-radius: 0.5em;
     }
-
-    a {
-        text-decoration: underline;
-        color: var(--mainColor);
-    }
-    .infoDiv, .paletteDiv{
-        color: var(--underline);
-        background-color: var(--backgroundDark);
-        margin-top: 2vh;
-        text-align: justify;
-        padding: 1em;
-        padding-block: 1em;
-        border-radius: 0.5em;
+    h5{
         font-size: 1.8vh;
-    } 
-    .infoBtns{
-        width: 100%;
-        margin-top: 3vh;
-        height: 9vh;
-        background-color: var(--backgroundDark);
-        border-radius: 0.5em;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-inline: 2vh;
     }
-    .colors{
-        width: 100%;
-        height: 5vh;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .color{
-        width: 3vh;
-        height: 3vh;
-        border-radius: 50%;
-    }
-    .themeDiv{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1vh;
 
-    }
-    .themeDiv > span{
-        width: 33%;
-        height: 6vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--background);
-        border-radius: 0.3em;
-        margin-inline: 0.8em;
-    }
 }

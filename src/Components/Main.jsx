@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { currentTab } from "../App";
-import { InfoTab, PaletteTab, SettingsTab } from "./miscTabs";
+import { InfoTab, PaletteTab } from "./miscTabs";
 import TaskContainer from "./TaskContainer";
 
 
@@ -21,7 +21,6 @@ function HeaderOfTaskSection(props){
             </h2>
             <div className="mobileNav">
                 <span onClick={() => {props.function("Info")}} className="material-symbols-outlined icon">info</span>
-                <span onClick={() => {props.function("Settings")}} className="material-symbols-outlined icon">settings</span>
                 <span onClick={() => {props.function("Palette")}} className="material-symbols-outlined icon">palette</span>
             </div>
         </div>
@@ -87,7 +86,6 @@ function Main(props){
                 <div className="configDiv">                
                     {(currentTab === "Info") ? <InfoTab function={(text) => {props.function(text);}} /> : ""}
                     {(currentTab === "Palette") ? <PaletteTab function={(text) => {props.function(text);}}/> : ""}
-                    {(currentTab === "Settings") ? <SettingsTab function={(text) => {props.function(text);}}/> : ""}
                 </div>
 
             </main>
