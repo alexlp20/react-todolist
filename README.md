@@ -7,14 +7,14 @@ It has been really useful because it helped me to explore the big world of this 
 
 With this project, I focused more on developing a pleasant and responsive mobile view. The desktop view is decent and as polished as the mobile one, but in my opinion, the mobile version is more comfortable and well-made.
 
-**Mobile View**
-![Mobile View](img/main.png)
+### Mobile View 
+<img src="img/main.png" alt="Default Mobile Menu" width="250" height="500"/>
 
-**Customable - Dark Mode and Highlight Colors**
-![Customization Menu - Mobile View](img/custom1.png)
+### Customable - Dark Mode and Highlight Colors 
+<img src="img/custom1.png.png" alt="Default Mobile Menu" width="250" height="500"/>
 
-**Light Mode**
-![Light Mode - Mobile View](img/custom2.png)
+### Light Mode
+<img src="img/custom2.png" alt="Default Mobile Menu" width="250" height="500"/>
 
-**Desktop View**
-![Desktop View](img/desktop.png)
+### Desktop View**
+<img src="img/desktop.png" alt="Default Mobile Menu" width="512" height="288"/>
