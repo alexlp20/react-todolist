@@ -11,10 +11,10 @@ With this project, I focused more on developing a pleasant and responsive mobile
 <img src="img/main.png" alt="Default Mobile Menu" width="250" height="500"/>
 
 ### Customable - Dark Mode and Highlight Colors 
-<img src="img/custom1.png.png" alt="Default Mobile Menu" width="250" height="500"/>
+<img src="img/custom1.png" alt="Default Mobile Menu" width="250" height="500"/>
 
 ### Light Mode
 <img src="img/custom2.png" alt="Default Mobile Menu" width="250" height="500"/>
 
 ### Desktop View**
-<img src="img/desktop.png" alt="Default Mobile Menu" width="512" height="288"/>
+<img src="img/desktop.png" alt="Default Mobile Menu" width="768" height="432"/>
