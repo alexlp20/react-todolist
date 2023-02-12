@@ -8,13 +8,13 @@ It has been really useful because it helped me to explore the big world of this 
 With this project, I focused more on developing a pleasant and responsive mobile view. The desktop view is decent and as polished as the mobile one, but in my opinion, the mobile version is more comfortable and well-made.
 
 **Mobile View**
-![Mobile View](src\Readme Images\main.png)
+![Mobile View](img\main.png)
 
 **Customable - Dark Mode and Highlight Colors**
-![Customization Menu - Mobile View](src\Readme Images\custom1.png)
+![Customization Menu - Mobile View](img\custom1.png)
 
 **Light Mode**
-![Light Mode - Mobile View](src\Readme Images\custom2.png)
+![Light Mode - Mobile View](img\custom2.png)
 
 **Desktop View**
-![Desktop View](src\Readme Images\desktop.png])
+![Desktop View](img\desktop.png)
