@@ -28,8 +28,9 @@ function HeaderOfTaskSection(props){
 }
 
 function Main(props){
-    const [taskContent, setTaskContent] = useState("")
-    const [tasks, setTasks] = useState([])
+    const [taskContent, setTaskContent] = useState("");
+    const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
     function addTask(content){        
         if(content === "" || content === null){
             alert("Task title should not be empty.");
@@ -47,15 +48,17 @@ function Main(props){
         }
         tasks.push(task);
         setTasks(tasks);
-        
+        localStorage.setItem("tasks", JSON.stringify(tasks));
         setTaskContent("");
-        console.log(tasks)
+        console.log(localStorage.getItem("tasks"), localStorage);
 
     }
     function deleteTask(task){
         console.log(task);
         const updatedArray = tasks.filter((i) => {return i !== task});
         setTasks(updatedArray);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        
     }
     if (currentTab === "Home" || currentTab === "School" || currentTab === "Work"){    
         return (
